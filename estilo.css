@@ -1,0 +1,63 @@
+/* Cuadrícula adaptable para la galería */
+.secciones-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+/* Estilo base de las tarjetas dinámicas */
+.tarjeta-navegacion {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    background-color: #1a1a24;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    border: 2px solid transparent;
+}
+
+/* Efecto de elevación e iluminación al pasar el cursor (Hover) */
+.tarjeta-navegacion:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.45);
+    border-color: #ff4757; /* Color destacado al enfocar la tarjeta */
+}
+
+/* Animación de zoom en la portada del videojuego */
+.imagen-contenedor {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.tarjeta-navegacion img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.tarjeta-navegacion:hover img {
+    transform: scale(1.1);
+}
+
+/* Formato de texto dentro de la tarjeta */
+.tarjeta-info {
+    padding: 1.2rem;
+    text-align: center;
+}
+
+.tarjeta-info h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.2rem;
+}
+
+.tarjeta-info p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
